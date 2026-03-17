@@ -1,3 +1,9 @@
+import os
+import sys
+
+# Verhindert, dass OpenCV nach fehlenden System-Bibliotheken sucht
+os.environ["OPENCV_LOG_LEVEL"] = "OFF"
+os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration
 import cv2
